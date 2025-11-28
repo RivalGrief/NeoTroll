@@ -1,0 +1,19 @@
+name: NeoTroll
+version: 1.0.0
+main: com.neotroll.neotroll.NeoTroll
+api-version: "1.16"
+description: Troll plugin with /crash command
+author: NeoStudio
+commands:
+  crash:
+    description: Crash player's client
+    usage: /crash <player>
+    permission: neotroll.crash
+permissions:
+  neotroll.*:
+    description: All NeoTroll permissions
+    children:
+      neotroll.crash: true
+  neotroll.crash:
+    description: Allows using /crash command
+    default: op
