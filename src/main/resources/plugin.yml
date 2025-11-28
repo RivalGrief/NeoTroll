@@ -1,19 +1,45 @@
 name: NeoTroll
-version: 1.0.0
+version: 1.1.0
 main: com.neotroll.neotroll.NeoTroll
 api-version: "1.16"
-description: Troll plugin with /crash command
+description: Advanced troll plugin with multiple trolling commands
 author: NeoStudio
+website: https://github.com/NeoStudio/NeoTroll
 commands:
   crash:
     description: Crash player's client
     usage: /crash <player>
     permission: neotroll.crash
+  fakeop:
+    description: Send fake op message to player
+    usage: /fakeop <player>
+    permission: neotroll.fakeop
+  lag:
+    description: Create lag around player
+    usage: /lag <player> [seconds]
+    permission: neotroll.lag
+  creeper:
+    description: Spawn invisible creepers on player
+    usage: /creeper <player> [amount]
+    permission: neotroll.creeper
 permissions:
   neotroll.*:
     description: All NeoTroll permissions
     children:
       neotroll.crash: true
+      neotroll.fakeop: true
+      neotroll.lag: true
+      neotroll.creeper: true
+      neotroll.troll: true
   neotroll.crash:
     description: Allows using /crash command
+    default: op
+  neotroll.fakeop:
+    description: Allows using /fakeop command
+    default: op
+  neotroll.lag:
+    description: Allows using /lag command
+    default: op
+  neotroll.creeper:
+    description: Allows using /creeper command
     default: op

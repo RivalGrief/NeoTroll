@@ -2,6 +2,9 @@ package com.neotroll.neotroll;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import com.neotroll.neotroll.CrashCommand;
+import com.neotroll.neotroll.FakeOpCommand;
+import com.neotroll.neotroll.LagCommand;
+import com.neotroll.neotroll.CreeperCommand;
 
 public class NeoTroll extends JavaPlugin {
 
@@ -11,11 +14,14 @@ public class NeoTroll extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        // Регистрируем команды
+        // Регистрируем все команды
         getCommand("crash").setExecutor(new CrashCommand());
+        getCommand("fakeop").setExecutor(new FakeOpCommand());
+        getCommand("lag").setExecutor(new LagCommand());
+        getCommand("creeper").setExecutor(new CreeperCommand());
 
         getLogger().info("NeoTroll v" + getDescription().getVersion() + " enabled!");
-        getLogger().info("Created by NeoStudio - ready for some trolling!");
+        getLogger().info("Now with 5 different trolling commands!");
     }
 
     @Override
