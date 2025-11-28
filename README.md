@@ -1,29 +1,27 @@
-# NeoTroll 🎭
+# NeoTroll 🎭 v1.1.0
 
-A Minecraft troll plugin for Spigot 1.16.5 that adds fun (but harmless) trolling commands.
+Advanced Minecraft troll plugin for Spigot 1.16.5 with multiple trolling commands.
+
+## 🆕 New in v1.1.0
+- Added 4 new trolling commands
+- Better crash methods
+- More fun ways to troll your friends!
 
 ## Features
 
-- **/crash <player>** - Attempts to crash player's client using various methods
-- Multiple crash methods for better compatibility
-- Permission-based command access
-
-## Commands
-
 | Command | Permission | Description |
 |---------|------------|-------------|
-| `/crash <player>` | `neotroll.crash` | Attempts to crash specified player's client |
+| `/crash <player>` | `neotroll.crash` | Attempts to crash player's client |
+| `/fakeop <player>` | `neotroll.fakeop` | Sends fake OP message to player |
+| `/lag <player> [seconds]` | `neotroll.lag` | Creates lag around player |
+| `/creeper <player> [amount]` | `neotroll.creeper` | Spawns invisible creepers |
+| `/troll` | `neotroll.troll` | Opens troll GUI (coming soon) |
 
 ## Installation
 
-1. Download the latest JAR from [Releases](#)
-2. Place it in your server's `plugins/` folder
-3. Restart the server
-4. Configure permissions if needed
-
-## Permissions
-
-- `neotroll.crash` - Allows using /crash command (default: op)
+1. Download latest JAR from [Releases](#)
+2. Place in `plugins/` folder
+3. Restart server
 
 ## Building
 
